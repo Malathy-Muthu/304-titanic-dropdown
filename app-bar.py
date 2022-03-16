@@ -80,9 +80,7 @@ def display_value(continuous_var):
 
     )
     
-    fig = make_subplots(rows=2, cols=1)
     fig = go.Figure(data=[mydata1, mydata2, mydata3], layout=mylayout, row=1, col=1)
-    fig.add_trace(go.Pie(names=df['Baths'],values=continuous_var),row=2, col=1)
     
     return fig
 
