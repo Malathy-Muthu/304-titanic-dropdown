@@ -10,9 +10,9 @@ import plotly.graph_objs as go
 
 ###### Define your variables #####
 tabtitle = 'Chicago Housing!'
-color1='#92A5E8'
-color2='#8E44AD'
-color3='#FFC300'
+color1='#44B5E8'
+color2='#8F33AD'
+color3='#FFC310'
 sourceurl = 'https://www.kaggle.com/c/titanic'
 githublink = 'https://github.com/plotly-dash-apps/304-titanic-dropdown'
 
@@ -48,7 +48,7 @@ app.layout = html.Div([
 @app.callback(Output('display-value', 'figure'),
               [Input('dropdown', 'value')])
 def display_value(continuous_var):
-    grouped_mean=df.groupby(['Baths', 'Neighborhood'])[continuous_var].mean()
+    grouped_mean=df.groupby(['Baths', 'HouseType'])[continuous_var].mean()
     results=pd.DataFrame(grouped_mean)
     # Create a grouped bar chart
     mydata1 = go.Bar(
@@ -72,7 +72,7 @@ def display_value(continuous_var):
 
     mylayout = go.Layout(
         title='Grouped bar chart',
-        xaxis = dict(title = 'Neighborhood'), # x-axis label
+        xaxis = dict(title = 'HouseType'), # x-axis label
         yaxis = dict(title = str(continuous_var)), # y-axis label
 
     )
