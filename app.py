@@ -10,9 +10,9 @@ import plotly.graph_objs as go
 
 ###### Define your variables #####
 tabtitle = 'Chicago Housing!'
-color1='#44B5E8'
-color2='#8F33AD'
-color3='#FFC310'
+color1='#e377c2'
+color2='#2ca02c'
+color3='#8c564b'
 sourceurl = 'https://www.kaggle.com/c/titanic'
 githublink = 'https://github.com/plotly-dash-apps/304-titanic-dropdown'
 
@@ -30,7 +30,8 @@ app.title=tabtitle
 
 ####### Layout of the app ########
 app.layout = html.Div([
-    html.H3('Choose a continuous variable for summary statistics:'),
+    html.H3('Chicago Housing Market Analysis'),
+    html.H2('Choose a continuous variable for summary statistics:'),
     dcc.Dropdown(
         id='dropdown',
         options=[{'label': i, 'value': i} for i in variables_list],
