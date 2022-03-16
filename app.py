@@ -13,8 +13,8 @@ tabtitle = 'Chicago Housing!'
 color1='#e377c2'
 color2='#2ca02c'
 color3='#8c564b'
-sourceurl = 'https://www.kaggle.com/c/titanic'
-githublink = 'https://github.com/plotly-dash-apps/304-titanic-dropdown'
+sourceurl = 'https://git.generalassemb.ly/intuit-ds-15/05-cleaning-combining-data/blob/master/data/chicago.csv'
+githublink = 'https://github.com/Malathy-Muthu/304-titanic-dropdown'
 
 
 ###### Import a dataframe #######
@@ -30,7 +30,7 @@ app.title=tabtitle
 
 ####### Layout of the app ########
 app.layout = html.Div([
-    html.H3('Chicago Housing Market Analysis'),
+    html.H1('Chicago Housing Market Analysis'),
     html.H2('Choose a continuous variable for summary statistics:'),
     dcc.Dropdown(
         id='dropdown',
