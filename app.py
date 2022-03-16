@@ -78,7 +78,7 @@ def display_value(continuous_var):
 
     )
     
-    fig = go.Figure(data=[mydata1, mydata2, mydata3], layout=mylayout)
+    fig = py.pie(df, values=continuous_var, names=df['Baths'], hole=.3)
    
     return fig
 
