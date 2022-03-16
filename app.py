@@ -31,7 +31,7 @@ app.title=tabtitle
 ####### Layout of the app ########
 app.layout = html.Div([
     html.H1('Chicago Housing Market Analysis',style={'color': 'blue', 'fontSize': 40, 'textAlign': 'center','text-decoration': 'underline'}),
-    html.H3('Choose a continuous variable from the drop down below for summary statistics:',style={'color': 'red', 'fontSize': 25, 'textAlign': 'center'}),
+    html.H3('Choose a continuous variable from the drop down below for summary statistics:',style={'color': '#800000', 'fontSize': 25, 'textAlign': 'center'}),
     dcc.Dropdown(
         id='dropdown',
         options=[{'label': i, 'value': i} for i in variables_list],
