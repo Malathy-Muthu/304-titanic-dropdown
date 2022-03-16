@@ -80,8 +80,7 @@ def display_value(continuous_var):
 
     )
     
-    fig = make_subplots(rows=1, cols=2)
-    fig = go.Figure(data=[mydata1, mydata2, mydata3], layout=mylayout, row=1, col=1)
+    fig = go.Figure(data=[mydata1, mydata2, mydata3], layout=mylayout)
    
     return fig
 
